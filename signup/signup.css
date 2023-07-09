@@ -1,0 +1,51 @@
+nav{
+    background-color: rgb(130, 75, 148);
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid green;
+    border-radius: 12px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1;
+    
+}
+nav a{
+    margin-top: 1%;
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    text-decoration: underline;
+    color:blue;
+}
+
+#signup_div{
+    margin: auto;
+    margin-top: 15%;
+    padding: 2%;
+    width:30%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:12px;
+    border:2px solid pink;
+    border-radius: 12px;
+}
+#signup_div input{
+    width:60%;
+    height: 100%;
+    border:2px solid black;
+    border-radius: 12px;
+}
+#signup{
+    background-color: teal;
+    color:white;
+    width:25%;
+    height:100%;
+    border-radius: 12px;
+    border:none;
+    padding: 1% 0% ;
+}
