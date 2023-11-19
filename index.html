@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyNexus</title>
     <link rel="stylesheet" href="./index.css">
+    <style>
+        /* Additional styling for larger tasks and spacing */
+        #tasks div {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body style="background-image: url(./image1/480421.jpg);">
     <nav>
@@ -18,5 +27,68 @@
         <button id="add">Add Task</button>
     </div>
     <div id="tasks"></div>
+
+    <script>
+        // Get references to the elements
+        const taskInput = document.getElementById("task");
+        const addButton = document.getElementById("add");
+        const tasksDiv = document.getElementById("tasks");
+
+        // Function to add a task
+        function addTask() {
+            // Get the task value from the input field
+            const taskText = taskInput.value;
+
+            // Check if the task text is not empty
+            if (taskText.trim() !== "") {
+                // Create a new div element for the task
+                const taskContainer = document.createElement("div");
+
+                // Create a new div element for the task text
+                const taskDiv = document.createElement("div");
+                taskDiv.textContent = taskText;
+                taskDiv.style.color = "pink";
+                taskDiv.style.fontSize = "18px"; // Larger font size
+
+                // Create update and delete buttons
+                const updateButton = document.createElement("button");
+                updateButton.innerText = "Update";
+                updateButton.style.marginRight = "5px"; // Add spacing
+                updateButton.addEventListener("click", () => updateTask(taskDiv));
+
+                const deleteButton = document.createElement("button");
+                deleteButton.innerText = "Delete";
+                deleteButton.addEventListener("click", () => deleteTask(taskContainer));
+
+                // Append taskDiv, buttons, and line break to the taskContainer
+                taskContainer.appendChild(taskDiv);
+                taskContainer.appendChild(document.createElement("br"));
+                taskContainer.appendChild(updateButton);
+                taskContainer.appendChild(deleteButton);
+
+                // Append the taskContainer to the tasks container
+                tasksDiv.appendChild(taskContainer);
+
+                // Clear the input field after adding the task
+                taskInput.value = "";
+            }
+        }
+
+        // Function to update a task
+        function updateTask(taskDiv) {
+            const newTaskText = prompt("Enter new task:");
+            if (newTaskText !== null) {
+                taskDiv.textContent = newTaskText;
+            }
+        }
+
+        // Function to delete a task
+        function deleteTask(taskContainer) {
+            tasksDiv.removeChild(taskContainer);
+        }
+
+        // Add a click event listener to the "Add Task" button
+        addButton.addEventListener("click", addTask);
+    </script>
 </body>
 </html>
