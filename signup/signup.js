@@ -9,7 +9,7 @@ button.addEventListener("click", () => {
     name: uname.value,
     password: pass.value,
   };
-  fetch("http://localhost:4046/user", {
+  fetch("http://localhost:4056/user", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
