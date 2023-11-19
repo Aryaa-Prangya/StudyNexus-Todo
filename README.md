@@ -14,3 +14,7 @@ StudyNex is a task management application designed to help users organize their 
 # Update Task
 ![Screenshot 2023-11-19 164327](https://github.com/Aryaa-Prangya/index/assets/138790828/19fbdf0a-8b88-4b49-bae2-64b26b0d7e15)
 
+# After Update
+![Screenshot 2023-11-19 171057](https://github.com/Aryaa-Prangya/index/assets/138790828/7447c260-6020-4f6f-8345-6ba03a0d8cc9)
+
+
