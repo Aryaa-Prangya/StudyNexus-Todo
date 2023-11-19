@@ -3,7 +3,7 @@ const pass = document.getElementById("password");
 const button = document.getElementById("signin");
 
 button.addEventListener("click", () => {
-  fetch("http://localhost:4046/user", {
+  fetch("http://localhost:4056/user", {
     method: "GET",
   })
     .then((res) => res.json())
